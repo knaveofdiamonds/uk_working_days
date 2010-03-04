@@ -14,4 +14,4 @@ Description goes here.
 
 == Copyright
 
-Copyright (c) 2010 Roland Swingler. See LICENSE for details.
+Copyright (c) 2010 Notonthehighstreet Enterprises Ltd. See LICENSE for details.
