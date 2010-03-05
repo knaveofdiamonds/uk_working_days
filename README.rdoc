@@ -1,6 +1,29 @@
-= uk_working_days
+= UK Working Days
 
-Description goes here.
+Provides mixins to the Date, Time and DateTime clasess to provide functionality around UK working days / public holidays.
+
+== Basic Usage
+
+If Easter monday is on the 5th April 2010:
+
+    Date.new(2010, 4, 5).public_holiday? # => true
+    Date.new(2010, 4, 5).working_day? # => false
+    Date.new(2010, 4, 5).weekday? # => true
+    Date.new(2010, 4, 5) == Date.easter_monday(2010) # => true
+    Date.public_holidays(2010).include?( Date.new(2010, 4, 5) ) # => true
+
+Will return DateTimes or Times instead as appropriate. See rdoc for more information.
+
+== Dependencies
+
+* ActiveSupport
+
+== Authors
+
+* Gregory Becker
+* Joe Simms
+* Roland Swingler
+* Jonathan Viney
 
 == Note on Patches/Pull Requests
  
