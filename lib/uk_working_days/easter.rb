@@ -11,8 +11,6 @@
 
 module UkWorkingDays
   module Easter
-    extend self
-
     # Calculate easter sunday for the given year
     def easter(year)
       golden_number = (year % 19) + 1
@@ -39,7 +37,7 @@ module UkWorkingDays
       
       day_easter = paschal_full_moon + difference + 1
       
-      day_easter < 11 ? Date.new(year, 3, day_easter + 21) : Date.new(year, 4, day_easter - 10)
+      day_easter < 11 ? new(year, 3, day_easter + 21) : new(year, 4, day_easter - 10)
     end
   end
 end
