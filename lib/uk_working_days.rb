@@ -1,5 +1,6 @@
 require 'date'
-require 'activesupport'
+require 'active_support/core_ext/date/conversions'
+require 'active_support/core_ext/time/calculations'
 require File.dirname(__FILE__) + '/uk_working_days/easter'
 require File.dirname(__FILE__) + '/uk_working_days/date_extensions'
 
