@@ -31,7 +31,7 @@ module UkWorkingDays
         count -= 1 if date.working_day?
         return date if count.zero? 
         
-        date += negative ? -1 : 1
+        date += (negative ? -1 : 1).day
       end
     end
 
