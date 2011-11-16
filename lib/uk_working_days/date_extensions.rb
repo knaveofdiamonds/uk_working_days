@@ -23,6 +23,7 @@ module UkWorkingDays
 
     # Returns the next (or count'th) working day
     def next_working_day(count = 1)
+      return self if count == 0
       negative = count < 0
       count = count.abs
       date = negative ? yesterday : tomorrow
