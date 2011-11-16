@@ -46,7 +46,7 @@ class TestUkWorkingDays < Test::Unit::TestCase
     assert_equal Time.local(2010, 3, 31), Time.local(2010, 4, 1).previous_working_day
   end
   
-  should "return self when passing 0 to #next_working_day o #previous_working_day" do
+  should "return self when passing 0 to #next_working_day or #previous_working_day" do
     date, time = Date.today, Time.now
     
     assert_equal date, date.next_working_day(0)
