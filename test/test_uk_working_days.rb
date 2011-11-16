@@ -45,6 +45,16 @@ class TestUkWorkingDays < Test::Unit::TestCase
     assert_equal Date.new(2010, 3, 31), Date.new(2010, 4, 1).previous_working_day
     assert_equal Time.local(2010, 3, 31), Time.local(2010, 4, 1).previous_working_day
   end
+  
+  should "return self when passing 0 to #next_working_day o #previous_working_day" do
+    date, time = Date.today, Time.now
+    
+    assert_equal date, date.next_working_day(0)
+    assert_equal time, time.next_working_day(0)
+    
+    assert_equal date, date.previous_working_day(0)
+    assert_equal time, time.previous_working_day(0)
+  end
 
   context "Date#new_years_day_holiday" do
     should "return new year's day if it is a weekday" do
