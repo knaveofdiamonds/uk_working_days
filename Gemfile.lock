@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/notonthehighstreet/holidays.git
+  revision: 9bee23aef0a870b184cd0a25d10903c142f96137
+  ref: 9bee23aef0a870b184cd0a25d10903c142f96137
+  specs:
+    notonthehighstreet-holidays (1.0.6)
+
 PATH
   remote: .
   specs:
@@ -31,5 +38,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  notonthehighstreet-holidays!
   shoulda
   uk_working_days!
