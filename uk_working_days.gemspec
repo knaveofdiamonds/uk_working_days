@@ -25,7 +25,6 @@ Gem::Specification.new do |s|
     "VERSION",
     "lib/uk_working_days.rb",
     "lib/uk_working_days/date_extensions.rb",
-    "lib/uk_working_days/easter.rb",
     "test/helper.rb",
     "test/test_uk_working_days.rb",
     "uk_working_days.gemspec"
@@ -43,6 +42,9 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<jeweler>, [">= 0"])
       s.add_runtime_dependency(%q<uk_working_days>, [">= 0"])
       s.add_development_dependency(%q<shoulda>, [">= 0"])
+      s.add_development_dependency(%q<shoulda>, [">= 0"])
+      s.add_development_dependency(%q<rake>, [">= 0"])
+      s.add_development_dependency(%q<pry>, [">= 0"])
       s.add_development_dependency(%q<shoulda>, [">= 0"])
       s.add_development_dependency(%q<rake>, [">= 0"])
       s.add_development_dependency(%q<pry>, [">= 0"])
@@ -70,6 +72,9 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<shoulda>, [">= 0"])
       s.add_dependency(%q<rake>, [">= 0"])
       s.add_dependency(%q<pry>, [">= 0"])
+      s.add_dependency(%q<shoulda>, [">= 0"])
+      s.add_dependency(%q<rake>, [">= 0"])
+      s.add_dependency(%q<pry>, [">= 0"])
       s.add_dependency(%q<activesupport>, [">= 3"])
       s.add_dependency(%q<shoulda>, [">= 0"])
       s.add_dependency(%q<rake>, [">= 0"])
@@ -80,6 +85,9 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<jeweler>, [">= 0"])
     s.add_dependency(%q<uk_working_days>, [">= 0"])
     s.add_dependency(%q<shoulda>, [">= 0"])
+    s.add_dependency(%q<shoulda>, [">= 0"])
+    s.add_dependency(%q<rake>, [">= 0"])
+    s.add_dependency(%q<pry>, [">= 0"])
     s.add_dependency(%q<shoulda>, [">= 0"])
     s.add_dependency(%q<rake>, [">= 0"])
     s.add_dependency(%q<pry>, [">= 0"])
