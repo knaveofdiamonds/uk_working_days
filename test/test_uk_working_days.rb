@@ -45,24 +45,28 @@ class TestUkWorkingDays < Test::Unit::TestCase
     assert_equal Date.new(2010, 3, 31), Date.new(2010, 4, 1).previous_working_day
     assert_equal Time.local(2010, 3, 31), Time.local(2010, 4, 1).previous_working_day
   end
-  
+
   should "return self when passing 0 to #next_working_day or #previous_working_day" do
     date, time = Date.today, Time.now
-    
+
     assert_equal date, date.next_working_day(0)
     assert_equal time, time.next_working_day(0)
-    
+
     assert_equal date, date.previous_working_day(0)
     assert_equal time, time.previous_working_day(0)
   end
 
   context "Date#public_holidays" do
     should "return the eight public holidays in the year" do
-      assert_equal 8, Date.public_holidays(2010).uniq.size 
+      assert_equal 8, Date.public_holidays(2010).uniq.size
     end
 
     should "return datetimes if called from DateTime" do
-      assert DateTime.public_holidays(2010).all? {|d| d.kind_of? DateTime }
+      assert DateTime.public_holidays(2010).all? {|d| d.class == DateTime }
+    end
+
+    should "return dates if called from Date" do
+      assert Date.public_holidays(2010).all? {|d| d.class == Date }
     end
   end
 end

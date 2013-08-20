@@ -49,10 +49,14 @@ module UkWorkingDays
       def public_holidays(year)
         year_start = Date.civil(year, 1, 1)
         year_end = Date.civil(year, 12, 31)
-        Holidays.between(year_start, year_end, :gb_eng, :observed).
+        holidays = Holidays.between(year_start, year_end, :gb_eng, :observed).
           map{|h| h[:date]}.
-          reject(&:weekend?). # Easter is always a Sunday so we don't need to include that
-          map(&:to_datetime)
+          reject(&:weekend?) # Easter is always a Sunday so we don't need to include that
+        if self == DateTime
+          holidays.map(&:to_datetime)
+        else
+          holidays
+        end
       end
     end
   end
